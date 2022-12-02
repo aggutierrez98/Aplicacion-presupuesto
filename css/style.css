@@ -1,277 +1,464 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --background-color: #fff;
+  --alternative-color: #f7f7f7;
+  --placeholder-color: #e7e7e7;
+  --text-color: #555;
+  --text2-color: #000000;
+  --primary-color: #59ce8f;
+  --secondary-color: #ff1e00;
 }
 
 body {
-    color: #555;
-    font-family: Open Sans;
-    font-size: 16px;
-    position: relative;
-    height: 100vh;
-    font-weight: 400;
+  color: var(--text-color);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  font-weight: 400;
+  background-color: var(--alternative-color);
 }
 
 .cabecero {
-    display: flex;
-    height: 400px;
-    width: 100%;
-    color: #fff;
-    background: url(fondo.png), #7b4397;
-    background: url(fondo.png), webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
-    background: url(fondo.png), linear-gradient(to left, #7b4397, #dc2430);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.cabecero-titulo {
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: 300;
+  display: flex;
+  height: 400px;
+  width: 100%;
+  color: var(--background-color);
+  background: url(fondo.jpg), linear-gradient(to left, #7b4397, #dc2430);
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .presupuesto-total {
-    width: 350px;
-    top: 50%;
-    left: 50%;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
+  top: 50%;
+  left: 50%;
+  color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+.cabecero-titulo {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 300;
 }
 
 .cabecero-valor {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .presupuesto-cabecero {
-    width: 480px;
-    top: 50%;
-    left: 50%;
-    color: #fff;
-    margin-bottom: 10px;
-    background-color: #28B9B5;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
-    align-items: center;
-    border-radius: 5px;
+  width: 480px;
+  top: 50%;
+  left: 50%;
+  color: var(--background-color);
+  margin-bottom: 10px;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  border-radius: 5px;
 }
 
 #egresos-cabecero {
-    background-color: #FF5049;
-    border-radius: 5px;
-    border: #FF5049 3px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border: var(--secondary-color) 3px;
+}
+
+.cabecero-titulo {
+  font-size: 20px;
+  margin-bottom: 0;
 }
 
 .cabecero-ingreso-valor {
-    display: flex;
-    width: 175px;
-    font-size: 22px;
+  display: flex;
+  font-size: 22px;
 }
 
 .cabecero-egreso-valor {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    width: 180px;
-    font-size: 22px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  /* width: 180px; */
+  font-size: 22px;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
 }
 
 .porcentaje-cabecera {
-    background-color: rgba(255, 255, 255, 0.2);
-    text-align: center;
-    border-radius: 3px;
-    font-size: 15px;
-    margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-left: 10px;
 }
 
 .porcentaje {
-    background-color: rgba(163, 10, 10, 0.2);
-    text-align: center;
-    border-radius: 3px;
+  margin-left: 25px;
+  background-color: rgba(163, 10, 10, 0.2);
+  text-align: center;
+  border-radius: 3px;
 }
 
 #forma {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .abajo {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .presupuesto {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 200px;
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-around;
+  width: 90%;
+  align-self: center;
+  margin-bottom: 50px;
 }
 
 .presupuesto-abajo {
-    display: flex;
-    width: 500px;
-    flex-direction: column;
-    margin-top: 100px;
-    margin-right: 100px;
-    align-items: flex-start;
+  display: flex;
+  /* width: 500px; */
+  width: 40%;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .abajo-ingreso-valor {
-    display: flex;
-    margin-top: 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
+  display: flex;
+  margin-top: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  width: 100%;
 }
 
 .abajo-egreso-valor {
-    display: flex;
-    margin-top: 0px;
-    flex-direction: column;
-    align-items: flex-end;
-    height: auto;
+  display: flex;
+  margin-top: 0px;
+  flex-direction: column;
+  align-items: flex-end;
+  height: auto;
+  width: 100%;
 }
 
-.valores-ingreso {
-    display: flex;
-    width: 500px;
-    justify-content: space-between;
-    margin-top: 50px;
-}
-
+.valores-ingreso,
 .valores-egreso {
-    display: flex;
-    width: 500px;
-    justify-content: space-between;
-    margin-top: 50px;
+  padding: 10px 0 10px;
+  display: flex;
+  width: 100%;
+  /* max-width: 500px; */
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.valores-in,
+.valores-eg {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .valores-in {
-    display: flex;
-    justify-content: space-between;
-    color: #28B9B5;
+  color: var(--primary-color);
 }
 
 .valores-eg {
-    display: flex;
-    justify-content: space-around;
-    width: 200px;
-    color: #FF5049;
-    padding-right: 0;
+  color: var(--secondary-color);
 }
 
 #ingresos-abajo h2 {
-    color: #28B9B5;
+  color: var(--primary-color);
 }
 
 #egresos-abajo h2 {
-    color: #FF5049;
+  color: var(--secondary-color);
+}
+
+.valores-in button,
+.valores-eg button {
+  position: absolute;
+  font-size: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0;
+  right: 0;
+  display: flex;
+  margin-left: 15px;
+  justify-content: flex-end;
+}
+
+.valores-ingreso:hover button,
+.valores-egreso:hover button {
+  opacity: 1;
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  transition: opacity 0.15s ease-in;
 }
 
 .valores-in button {
-    color: #28B9B5;
-    font-size: 22px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1;
-    display: none;
+  color: var(--primary-color);
 }
 
 .valores-eg button {
-    color: #FF5049;
-    font-size: 22px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1;
-    display: none;
+  color: var(--secondary-color);
 }
 
-.valores-ingreso:hover .valores-in button {
-    display: block;
-    display: flex;
-    width: 40px;
-    justify-content: flex-end;
+.valores-in button:active,
+.valores-eg button:active {
+  transform: translateY(1.5px);
 }
 
-.valores-egreso:hover .valores-eg button {
-    display: block;
+.valores-ingreso .valores-in p,
+.valores-egreso .valores-eg .porcentaje,
+.valores-egreso .valores-eg p {
+  transition: all 0.15s ease;
 }
 
-.valores-ingreso:hover .p {
-    transform: translateX(-20px);
+.valores-ingreso:hover .valores-in p,
+.valores-egreso:hover .valores-eg .porcentaje {
+  transform: translateX(-35px);
+}
+
+.valores-egreso:hover .valores-eg p {
+  transform: translateX(-25px);
+}
+
+.sin-ingresos,
+.sin-egresos {
+  align-items: flex-start;
+  font-size: 18px;
+  margin-top: 10px;
+  position: relative;
+  margin-bottom: 51px;
+}
+
+.sin-ingresos::after,
+.sin-egresos::after {
+  position: absolute;
+  content: attr(data-text);
+  font-weight: bold;
+  top: 45px;
 }
 
 form {
-    padding: 14px;
-    border-bottom: 1px solid #e7e7e7;
-    background-color: #f7f7f7;
-    margin: 0 auto;
-    text-align: center;
+  padding: 14px;
+  background-color: var(--alternative-color);
+  margin: 0 auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .agregar-tipo {
-    width: 100px;
-    border: 1px solid #e7e7e7;
-    height: 44px;
-    font-size: 18px;
-    color: inherit;
-    background-color: #fff;
-    margin-right: 10px;
-    font-weight: 300;
-    transition: border 0.3s;
+  border: 1px solid var(--placeholder-color);
+  height: 44px;
+  font-size: 15px;
+  background-color: var(--background-color);
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 300;
+  outline: none;
+  border-radius: 5px;
+}
+.agregar-tipo:required:invalid {
+  color: #7e7e7e;
+}
+.agregar-tipo option {
+  color: var(--text-color);
 }
 
 .agregar-descripcion,
 .agregar-valor {
-    border: 1px solid #e7e7e7;
-    background-color: #fff;
-    color: inherit;
-    font-family: inherit;
-    font-size: 14px;
-    padding: 12px 15px;
-    margin-right: 10px;
-    border-radius: 5px;
-    transition: border 0.3s;
+  border: 1px solid var(--placeholder-color);
+  background-color: var(--background-color);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px 15px;
+  margin-right: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.agregar-tipo:focus {
+  box-shadow: 0 0 2.35px black;
+}
+
+.agregar-descripcion:focus,
+.agregar-valor:focus {
+  box-shadow: 0 0 2.35px black;
 }
 
 .agregar-descripcion {
-    width: 400px;
+  width: 400px;
 }
 
 .agregar-valor {
-    width: 100px;
+  width: 100px;
 }
 
 .agregar-boton {
-    font-size: 35px;
-    background: none;
-    border: none;
-    color: #28B9B5;
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1.1;
-    margin-left: 10px;
+  font-size: 40px;
+  display: flex;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-left: 3px;
+  outline: none;
 }
 
 .agregar-boton:active {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
 
-.agregar-boton:focus {
-    outline: none;
+@media (max-width: 1024px) {
+  .presupuesto {
+    flex-direction: column;
+  }
+  .presupuesto-abajo {
+    width: 95%;
+    align-self: center;
+  }
+  #ingresos-abajo {
+    margin-bottom: 40px;
+  }
+  .valores-ingreso,
+  .valores-egreso {
+    margin-top: 20px;
+  }
+  #forma {
+    max-width: 700px;
+    width: 85%;
+    justify-content: space-between;
+    padding: 8px;
+  }
+  #valor {
+    margin-right: 2px;
+  }
+
+  .sin-ingresos::after,
+  .sin-egresos::after {
+    top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .presupuesto-total h1 {
+    font-size: 45px;
+  }
+  .presupuesto-total h2 {
+    font-size: 25px;
+  }
+
+  .presupuesto-cabecero {
+    width: 80%;
+    padding: 10px 15px;
+  }
+
+  .cabecero-titulo {
+    font-size: 18px;
+  }
+
+  .cabecero-ingreso-valor,
+  .cabecero-egreso-valor {
+    font-size: 18px;
+    width: fit-content;
+  }
+
+  .cabecero {
+    height: 350px;
+  }
+
+  .agregar-descripcion {
+    width: 55% !important;
+    flex-grow: 1;
+  }
+  .agregar-valor {
+    width: 85px !important;
+  }
+
+  .presupuesto h2 {
+    font-size: 18px;
+  }
+
+  .porcentaje {
+    display: none;
+  }
+  .valores-egreso:hover .valores-eg p {
+    transform: translatex(-35px);
+  }
+
+  .valores-ingreso p,
+  .valores-egreso p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sin-ingresos::after,
+  .sin-egresos::after {
+    top: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  #forma {
+    flex-direction: column;
+    max-width: 360px;
+  }
+
+  #forma input {
+    width: 100% !important;
+  }
+
+  .agregar-descripcion {
+    margin: 5px 0 5px;
+  }
+
+  .agregar-tipo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .agregar-boton {
+    margin-top: 10px;
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  .presupuesto-cabecero {
+    flex-direction: column;
+    width: 85%;
+  }
+  .cabecero-titulo {
+    margin-bottom: 5px;
+  }
 }
