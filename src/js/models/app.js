@@ -11,10 +11,7 @@ export class App {
     }
 
     asignarBoton() {
-        document.getElementById("boton-form").addEventListener("click", (e) => {
-            this.agregarDato(e)
-            this.mostrarPresupuesto()
-        })
+        document.getElementById("boton-form").addEventListener("click", () => this.agregarDato())
     }
 
     mostrarPresupuesto() {
