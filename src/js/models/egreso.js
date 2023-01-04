@@ -1,4 +1,6 @@
-class Egreso extends Dato {
+import {Dato} from './dato';
+
+export class Egreso extends Dato {
     static contadorEgresos = 0;
 
     constructor(nombre, valor) {

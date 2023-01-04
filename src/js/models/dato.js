@@ -1,4 +1,4 @@
-class Dato {
+export class Dato {
     constructor(nombre, valor) {
         this._nombre = nombre;
         this._valor = valor;

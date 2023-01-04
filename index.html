@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/style.css" rel="stylesheet" />
     <title>BudgetApp</title>
     <meta name="description" content="Application for budget managment" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,34 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/static/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/static/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/static/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/static/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/static/safari-pinned-tab.svg"
-      color="#ffffff"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
   </head>
-
-  <body onload="mostrarPresupuesto()">
+  <body>
     <div class="cabecero">
       <div class="presupuesto-total">
         <div class="cabecero-titulo">
@@ -86,8 +66,8 @@
         />
         <button
           class="agregar-boton"
-          onclick="agregarDato()"
           title="Add income/outcome"
+          id="boton-form"
         >
           <ion-icon
             title="Add income/outcome"
@@ -106,10 +86,10 @@
         </div>
       </div>
     </div>
-    <script src="js/dato.js"></script>
-    <script src="js/ingreso.js"></script>
-    <script src="js/egreso.js"></script>
-    <script src="js/app.js"></script>
+
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"

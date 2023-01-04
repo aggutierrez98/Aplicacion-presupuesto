@@ -1,11 +1,10 @@
+import { Ingreso, Egreso } from './models';
+import { formatoMoneda } from './helpers';
+
 const incomesData = JSON.parse(localStorage.getItem("incomes-data") ?? "[]");
 const outcomesData = JSON.parse(localStorage.getItem("outcomes-data") ?? "[]");
 const incomes = incomesData.map(income => new Ingreso(income._nombre, income._valor))
 const outcomes = outcomesData.map(outcome => new Egreso(outcome._nombre, outcome._valor))
-
-function formatoMoneda(valor) {
-    return valor.toLocaleString("es-AR", { style: "currency", currency: "ARS", minimumFractionDigits: 2 })
-}
 
 function mostrarPresupuesto() {
     let totalIngresos = mostrarIngresos();
@@ -134,3 +133,8 @@ function actualizarLocalStorage() {
     localStorage.setItem("incomes-data", incomesData)
     localStorage.setItem("outcomes-data", outomcesData)
 }
+
+
+document.body.addEventListener("load", mostrarPresupuesto)
+
+document.getElementById("boton-form").addEventListener("click", agregarDato)
