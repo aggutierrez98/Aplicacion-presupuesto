@@ -277,21 +277,25 @@ form {
 
 .agregar-tipo {
   border: 1px solid var(--placeholder-color);
-  height: 44px;
-  font-size: 15px;
+  /* height: 44px; */
+  padding: 12.5px 15px;
+  font-size: 14px;
   background-color: var(--background-color);
   margin-right: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: 300;
   outline: none;
   border-radius: 5px;
 }
 .agregar-tipo:required:invalid {
   color: #7e7e7e;
+  font-size: 14px;
+  padding: 11px 15px;
+  font-family: inherit;
+  font-weight: 500;
 }
 .agregar-tipo option {
   color: var(--text-color);
+  font-family: inherit;
+  font-size: 14px;
 }
 
 .agregar-descripcion,
@@ -304,6 +308,13 @@ form {
   margin-right: 10px;
   outline: none;
   border-radius: 5px;
+}
+
+.agregar-descripcion::placeholder,
+.agregar-valor::placeholder {
+  color: #7e7e7e;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .agregar-tipo:focus {
@@ -324,7 +335,7 @@ form {
 }
 
 .agregar-boton {
-  width: 40px;
+  width: 40px !important;
   height: 40px;
   font-size: 40px;
   display: flex;
@@ -371,6 +382,40 @@ form {
   }
 }
 
+@media (max-width: 800px) {
+  .agregar-descripcion {
+    width: 50% !important;
+    flex-grow: 1;
+    margin-right: 5px;
+  }
+  .agregar-tipo {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 700px) {
+  .agregar-descripcion,
+  .agregar-valor {
+    padding: 10px 12px;
+    margin-right: 3px;
+  }
+  .agregar-tipo {
+    padding: 10px 12px;
+    margin-right: 3px;
+    padding-left: 7px;
+  }
+  .agregar-tipo:required:invalid {
+    padding: 8.65px 12px;
+    padding-left: 8px;
+  }
+  .agregar-tipo {
+    width: 100px;
+  }
+  .agregar-valor {
+    width: 80px;
+  }
+}
+
 @media (max-width: 600px) {
   .presupuesto-total h1 {
     font-size: 45px;
@@ -399,11 +444,8 @@ form {
   }
 
   .agregar-descripcion {
-    width: 55% !important;
+    width: 45% !important;
     flex-grow: 1;
-  }
-  .agregar-valor {
-    width: 85px !important;
   }
 
   .presupuesto h2 {
