@@ -27,7 +27,7 @@ body {
   height: 400px;
   width: 100%;
   color: var(--background-color);
-  background: url(fondo.jpg), linear-gradient(to left, #7b4397, #dc2430);
+  background: url(fondo.webp), linear-gradient(to left, #7b4397, #dc2430);
   background-size: cover;
   flex-direction: column;
   align-items: center;
