@@ -78,7 +78,7 @@ export class App {
                         %${porcentaje.toFixed(2)}
                     </div>
                     <button class="egreso-btn-${cont}">
-                    <ion-icon name="close-circle-outline"></ion-icon>
+                        <ion-icon name="close-circle-outline"></ion-icon>
                     </button>
                 </div>
             </div>`
