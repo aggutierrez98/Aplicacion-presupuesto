@@ -17,7 +17,7 @@ HTML, CSS, Javascript, Vite & Node
 ```json
 "scripts": {
     "dev": "vite",
-    "build": "vite build --emptyOutDir",
+    "build": "vite build",
     "preview": "vite preview"
   },
 ```
