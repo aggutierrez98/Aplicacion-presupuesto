@@ -7,6 +7,7 @@ export default defineConfig({
     build: {
         root: path.join(__dirname, "src"),
         outDir: path.join(__dirname, "build"),
+        emptyOutDir: true
     },
     input: "src/js/index.js",
     root: "src",
