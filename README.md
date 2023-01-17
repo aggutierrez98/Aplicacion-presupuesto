@@ -2,8 +2,6 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4995dac2-b2c7-4221-96f2-047f72d03490/deploy-status)](https://app.netlify.com/sites/aggutierrez-budgetsapp/deploys)
 
-This repository contains pr
-
 ## Vanilla JS application to manage budget incomes and outcomes
 
 ### Made with
